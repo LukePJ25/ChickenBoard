@@ -1,0 +1,131 @@
+html {
+    background-color: #203450;
+    font-size: 14px;
+    font-family: Arial, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #000000;
+}
+
+.container {
+    background-color: #5e8ad0;
+    margin: auto;
+    padding: 20px;
+    border: 3px outset #6a99e8;
+    border-radius: 20px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+
+#image_input_container {
+    width: auto;
+    margin: auto;
+    z-index: 3;
+    display: none;
+    position: absolute;
+}
+
+#main_container {
+    width: 600px;
+}
+
+canvas {
+    position: absolute;
+    margin: auto;
+    border: 3px inset #6a99e8;
+    border-radius: 8px;
+}
+#canvas_container {
+    padding-bottom: 510px;
+}
+
+#drawing_canvas {
+    z-index: 1;
+    image-rendering: pixelated;
+}
+#overlay_canvas {
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0);
+}
+#overlay_canvas:hover {
+    cursor: none;
+}
+
+#canvas_controls {
+    display: inline-block;
+    width: 100%;
+}
+
+button {
+    border: 2px outset #bce;
+    border-radius: 4px;
+    background-color: #bce;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+    font-family: inherit;
+}
+button:hover {
+    border: 2px outset #cdf;
+    background-color: #ddf;
+}
+button:active {
+    border: 2px inset #68c;
+    background-color: #68c;
+}
+
+.control_button {
+    padding: 2px 4px;
+}
+.tool_button {
+    width: 32px;
+    height: 32px;
+    padding: 16px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+}
+.tool_button#button_pencil {
+    background: #bce url("res/res.gif") 0 0;
+}
+.tool_button#button_eraser {
+    background: #bce url("res/res.gif") -32px 0;
+}
+.tool_button#button_brush {
+    background: #bce url("res/res.gif") -64px 0;
+}
+.tool_button#button_spray {
+    background: #bce url("res/res.gif") -96px 0;
+}
+.tool_button#button_line {
+    background: #bce url("res/res.gif") -130px 0;
+}
+.tool_button#button_picker {
+    background: #bce url("res/res.gif") -162px 0;
+}
+.tool_button#button_fill {
+    background: #bce url("res/res.gif") -164px 0;
+}
+.tool_button#spray_strength_1 {
+    background: #bce url("res/res.gif") 0 -32px;
+}
+.tool_button#spray_strength_2 {
+    background: #bce url("res/res.gif") -32px -32px;
+}
+.tool_button#spray_strength_3 {
+    background: #bce url("res/res.gif") -64px -32px;
+}
+.tool_setting {
+    width: 64px;
+    font-family: inherit;
+}
+
+h1 {
+    color: #fff;
+    text-shadow: #212121 2px 2px 4px;
+}
+
+.vertical_separator {
+    margin: 4px 0;
+    height: 1px;
+    width: 100%;
+    border: 3px outset #6a99e8;
+    border-radius: 4px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+}

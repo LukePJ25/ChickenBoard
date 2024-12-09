@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+    <title>ChickenBoard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div class="container" id="main_container">
+        <h1>ChickenBoard</h1>
+        <div id="canvas_container">
+            <canvas id="drawing_canvas" width="600" height="500"></canvas>
+            <canvas id="overlay_canvas" width="600" height="500"></canvas>
+        </div>
+        <div id="canvas_controls">
+            <button class="control_button" onclick="clearCanvasRequest(gtx, '#fff')">Clear Canvas</button>
+            <button class="control_button" onclick="saveAsImage()">Save Image</button>
+            <button class="control_button" onclick="document.getElementById('fileInput').click()">Load Image</button>
+            <input type="file" id="fileInput" accept="image/*" style="display: none;" onchange="loadInImage()">
+            <div class="vertical_separator"></div>
+            <div id="tools_container">
+                <button aria-label="Brush" class="tool_button" id="button_brush" onclick="changeTool(0);"></button>
+                <button aria-label="Eraser" class="tool_button" id="button_eraser" onclick="changeTool(1);"></button>
+                <button aria-label="Pencil" class="tool_button" id="button_pencil" onclick="changeTool(2);"></button>
+                <button aria-label="Spray" class="tool_button" id="button_spray" onclick="changeTool(3);"></button>
+                <button aria-label="Line" class="tool_button" id="button_line" onclick="changeTool(4);"></button>
+                <button aria-label="Picker" class="tool_button" id="button_picker" onclick="changeTool(5);"></button>
+            </div>
+            <div class="vertical_separator"></div>
+            <div id="tools_settings_container">
+                <div id="tool_size_selector_container">
+                    <label for="tool_size_selector">Size</label>
+                    <input class="tool_setting" type="number" id="tool_size_selector" min="1" max="256" value="8">
+                </div>
+                <div id="spray_settings_container">
+                    <button class="tool_button" id="spray_strength_1" onclick="sprayStrength(1);"></button>
+                    <button class="tool_button" id="spray_strength_2" onclick="sprayStrength(2);"></button>
+                    <button class="tool_button" id="spray_strength_3" onclick="sprayStrength(3);"></button>
+                </div>
+            </div>
+            <div class="vertical_separator"></div>
+            <div id="colour_container">
+                <label for="colour_selector">Colour</label>
+                <input type="color" id="colour_selector" value="#000">
+            </div>
+        </div>
+        <script src="js/drawing.js"></script>
+    </div>
+</body>
